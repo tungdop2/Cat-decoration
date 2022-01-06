@@ -1,5 +1,5 @@
 # Real-time cat decoration
-This model is based on landmark detection with ResNet18 backbone
+This model is based on landmark detection with ResNet18 backbone.
 
 # Run
 1. Install the required packages
