@@ -4,9 +4,9 @@ import torch.nn.functional as F
 import torchvision.models as models
 
 class Cat(nn.Module):
-    def __init__(self):
+    def __init__(self, pretrained=False):
         super(Cat, self).__init__()
-        self.model = models.resnet18(pretrained=True)
+        self.model = models.resnet18(pretrained=pretrained)
         self.model.fc = nn.Sequential(
             nn.Dropout(0.2),
             nn.Linear(self.model.fc.in_features, 256),
